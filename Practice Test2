@@ -1,0 +1,27 @@
+import 'dart:io';
+ 
+void main() {
+    String? inputS = stdin.readLineSync()!;
+    int? inputInt = int.parse(inputS);
+
+    if(inputInt == 0){
+        print("The number is zero.");
+    }else{
+        if( (inputInt % 2) == 0 ) {
+            if( (inputInt > 0) ){
+                print("${inputInt} is a positive number.");
+            }else{
+                print("${inputInt} is a negative number.");
+            }
+        }else if( (inputInt % 2) != 0 ){
+            if( (inputInt > 0) ){
+                print("${inputInt} is a positive number.");
+            }else{
+                print("${inputInt} is a negative number.");
+            }
+        }else{
+            
+        }
+    }
+    
+}
