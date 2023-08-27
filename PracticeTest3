@@ -1,0 +1,27 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  List<String> vals1 = stdin.readLineSync()!.split(' ');
+  List<String> vals2 = stdin.readLineSync()!.split(' ');
+  double x1 = double.parse(vals1[0]);
+  double x2 = double.parse(vals1[1]);
+  double y1 = double.parse(vals2[0]);
+  double y2 = double.parse(vals2[1]);
+
+  // Define two points
+  Point point1 = Point(x1, x2);
+  Point point2 = Point(y1, y2);
+
+  // Calculate the distance
+  double distance = calculateDistance(point1, point2);
+  print('Distance: ${distance.toStringAsFixed(2)}');
+}
+
+double calculateDistance(Point point1, Point point2) {
+  num deltaX = point2.x - point1.x;
+  num deltaY = point2.y - point1.y;
+
+  double distance = sqrt(deltaX * deltaX + deltaY * deltaY);
+  return distance;
+}
