@@ -1,0 +1,11 @@
+import 'dart:io';
+
+void main() {
+  String vals = stdin.readLineSync()!;
+  double? celsius = double.parse(vals);
+  // Converting Celsius to Fahrenheit
+  double fahrenheit = (celsius * 1.8) + 32;
+
+  // Displaying the result with two decimal points
+  print("The temperature in Fahrenheit is: ${fahrenheit.toStringAsFixed(2)}");
+}
